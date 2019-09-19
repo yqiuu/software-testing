@@ -1,7 +1,4 @@
-.. code:: rst
-
-    |TRAVIS|
-*Once you have your TRAVIS build running and your badge successfully added down the bottom of the README, you can use the above to add a shiny badge at the top of your repo.*
+|TRAVIS|
 
 
 *************************************
@@ -80,8 +77,8 @@ Badges
 ======
 Adjust the URLs here to point to your own Travis badge!
 
-.. code:: rst
 
-  .. |TRAVIS| image:: https://travis-ci.com/jacobseiler/software-testing.svg?token=5c6Q56fcBuVVhRGKosZB&branch=master
+
+ .. |TRAVIS| :image: https://travis-ci.com/yqiuu/software-testing.svg?branch=master 
     :alt: Travis Badge
-    :target: https://travis-ci.com/jacobseiler/software-testing
+    :target: https://travis-ci.com/yqiuu/software-testing
