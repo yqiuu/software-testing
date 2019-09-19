@@ -6,7 +6,7 @@ notifications:
   email:
     recipients:
       # Please don't email me.  Put your email here.
-      - XxSephirothxX999@edgy.com
+      - yishengq@student.unimelb.edu.au
     on_success: change
     on_failure: always
 
@@ -14,10 +14,10 @@ matrix:
 
   include:
     - os: linux
-      python: # Should be a string version, e.g., "2.7".  DON'T ACTUALLY TEST 2.7 though!
+      python: 3.6 # Should be a string version, e.g., "2.7".  DON'T ACTUALLY TEST 2.7 though!
 
     - os: osx 
-      python: # Should be a string version, e.g., "2.7".  DON'T ACTUALLY TEST 2.7 though!
+      python: 3.6 # Should be a string version, e.g., "2.7".  DON'T ACTUALLY TEST 2.7 though!
       osx_image: xcode10.2  # Python 3.7.2 running on macOS 10.14.3
       language: generic # 'language: python' is an error on Travis CI macOS
 
@@ -30,10 +30,11 @@ install:
   - python3 -m pip install -r requirements.txt
 
 script:
+    pytest
   # If you were testing on your own machine, what command do you execute to run your code? Hint: Starts with `py`...
   -
 
 # If all the tests passed, update `codecov`. Ensures your coverage is ALWAYS relevant.
 # Comment out these lines once Travis is working and you have Codecov linked to GitHub.
-#after_success:
-  #- codecov 
+after_success:
+  - codecov 
